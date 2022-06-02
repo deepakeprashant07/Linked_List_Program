@@ -53,4 +53,31 @@ public class MyNodeMethod {
         }
         System.out.print("null \n");
     }
+
+    public void inserList(MyNode head, MyNode secondValue, MyNode thirdValue) {
+        head.next = secondValue;
+        secondValue.next = thirdValue;
+        thirdValue.next = null;
+        System.out.println("Enter Data To Insert");
+        int toAdd = scan.nextInt();
+        MyNode<Integer> insertData = new MyNode<>(toAdd);
+        System.out.println("Which Position Add");
+        int position = scan.nextInt();
+        if (position == 0) {
+            insertData.next = head;
+            head=insertData;
+            return;
+        }
+        MyNode previousData = head;
+        for (int i = 0; i < position - 1; i++) {
+            previousData = previousData.next;
+        }
+        insertData.next = previousData.next;
+        previousData.next = insertData;
+        while (head != null) {
+            System.out.print(head.key + " -> ");
+            head = head.next;
+        }
+        System.out.print("null \n");
+    }
 }
