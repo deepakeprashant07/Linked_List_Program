@@ -1,5 +1,7 @@
 package LinkedList_Program;
 
+import java.util.Scanner;
+
 public class MyNodeTest {
     public static void main(String args[]) {
         MyNode<Integer> firstValue = new MyNode<>(56);
@@ -13,6 +15,19 @@ public class MyNodeTest {
             System.out.print(head.key+" -> ");
             head = head.next;
         }
-        System.out.print("null");
+        System.out.print("null \n");
+
+        MyNodeMethod myNodeObject = new MyNodeMethod();
+        Scanner scan = new Scanner(System.in);
+        System.out.println("1] Create New Linked List");
+        int choice= scan.nextInt();
+        switch (choice){
+            case 1:
+                myNodeObject.addList();
+                break;
+            default:
+                System.out.println("Wrong Choice \nThank You...!");
+
+        }
     }
 }
