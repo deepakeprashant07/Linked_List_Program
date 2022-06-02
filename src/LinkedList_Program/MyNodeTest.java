@@ -6,6 +6,7 @@ public class MyNodeTest {
     public static final int UC2 = 1;
     public static final int UC3 = 2;
     public static final int UC4 = 3;
+    public static final int UC5 = 4;
 
     public static void main(String args[]) {
         MyNode<Integer> firstValue = new MyNode<>(56);
@@ -26,6 +27,7 @@ public class MyNodeTest {
         System.out.println("1] Create New Linked List");
         System.out.println("2] Append Linked List");
         System.out.println("3] Insert Data Linked List");
+        System.out.println("4] Pop Method Linked List");
         int choice = scan.nextInt();
         switch (choice) {
             case UC2:
@@ -38,6 +40,9 @@ public class MyNodeTest {
                 break;
             case UC4:
                 myNodeObject.inserList(firstValue,secondValue,thirdValue);
+                break;
+            case UC5:
+                myNodeObject.popList(firstValue,secondValue,thirdValue);
                 break;
             default:
                 System.out.println("Wrong Choice \nThank You...!");

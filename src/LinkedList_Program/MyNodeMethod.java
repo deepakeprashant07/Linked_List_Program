@@ -1,11 +1,11 @@
 package LinkedList_Program;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class MyNodeMethod {
     Scanner scan = new Scanner(System.in);
-    ArrayList<MyNode> buffer = new ArrayList<>();
+    LinkedList<MyNode> buffer = new LinkedList<>();
 
     public void addList() {
         System.out.println("Enter Node Data");
@@ -79,5 +79,19 @@ public class MyNodeMethod {
             head = head.next;
         }
         System.out.print("null \n");
+    }
+
+    public void popList(MyNode head, MyNode secondValue, MyNode thirdValue) {
+        head.next = secondValue;
+        secondValue.next = thirdValue;
+        thirdValue.next = null;
+        buffer.push(head);
+        buffer.push(secondValue);
+        buffer.push(thirdValue);
+        buffer.pop();
+        for (int i = 0; i < buffer.size(); i++) {
+            System.out.print(buffer.get(i).key+" ->");
+        }
+        System.out.println("null\n");
     }
 }
