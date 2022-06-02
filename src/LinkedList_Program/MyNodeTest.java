@@ -24,6 +24,7 @@ public class MyNodeTest {
         switch (choice){
             case 1:
                 myNodeObject.addList();
+                myNodeObject.uc1Print();
                 break;
             default:
                 System.out.println("Wrong Choice \nThank You...!");
